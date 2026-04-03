@@ -12,7 +12,7 @@ def tpcv_decision(
 
     scores = np.asarray(scores, dtype=np.float64)
     thresholds = np.asarray(thresholds, dtype=np.float64)
-    diff = scores - thresholds  # >0 表示超出阈值
+    diff = scores - thresholds  
 
     min_diff = diff.min(axis=1)
     count_strong = (diff >= delta).sum(axis=1)
