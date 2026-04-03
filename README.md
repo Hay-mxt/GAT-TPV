@@ -113,9 +113,6 @@ Example workflow:
 
 python
 Step 1: get anomaly scores from each model
-s_ae = ae_model.score(x)
-s_rnn = rnn_model.score(x)
-s_gnn = gnn_model.score(x)
 
 Step 2: align scores and compute confidence
 s_aligned, confidence = gaml(s_ae, s_rnn, s_gnn)
