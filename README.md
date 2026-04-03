@@ -111,17 +111,13 @@ Since this repository focuses on **core methodology**, users need to provide:
 
 Example workflow:
 
-python
 Step 1: get anomaly scores from each model
 
 Step 2: align scores and compute confidence
-s_aligned, confidence = gaml(s_ae, s_rnn, s_gnn)
 
 Step 3: adaptive thresholds
-thresholds = a_evt(s_aligned, confidence)
 
 Step 4: consensus decision
-decision = tpcv(s_aligned, thresholds, k=2)
 
 ---
 
@@ -136,6 +132,7 @@ Users can integrate their own datasets and feature extraction methods.
 ## Requirements
 
 Python 3.8+
+
 NumPy / SciPy / scikit-learn
 
 ---
