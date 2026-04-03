@@ -25,8 +25,8 @@ def cluster_unknowns(
         sample_scores = np.asarray(sample_scores, dtype=np.float32)
         if sample_scores.shape[0] != N:
             raise ValueError(
-                f"sample_scores 长度 {sample_scores.shape[0]} "
-                f"与 features 数量 {N} 不一致。"
+                f"sample_scores  {sample_scores.shape[0]} "
+                f" features  {N} "
             )
 
     method = method.lower()
@@ -69,7 +69,7 @@ def cluster_unknowns(
         labels_small = model.fit_predict(feats_used)
 
     else:
-        raise ValueError(f"未知聚类方法: {method}. 目前支持 'dbscan' 和 'kmeans'。")
+        raise ValueError(f"unknown: {method}.  'dbscan' and 'kmeans'。")
 
     labels = np.full(N, -1, dtype=int)
     labels[sel_idx] = labels_small.astype(int)
